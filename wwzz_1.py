@@ -238,7 +238,7 @@ is_muon_pair = (ak.count(good_muons.pt, axis=1) == 2) & (ak.count(good_electrons
 Mz = 91.
 #MET_sel = MET.pt > 30
 
-nlep_sel = (ak.count(good_leptons.pt,axis=1)>=2) 
+nlep_sel = (ak.count(good_leptons.pt,axis=1)>=3) 
 total_sel = nlep_sel 
 # total_sel = nlep_sel
 events = events[total_sel]
