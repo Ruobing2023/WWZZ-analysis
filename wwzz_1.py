@@ -96,7 +96,7 @@ events['nveto_muons'] = np.sum(veto_muon_sel,axis=1)
 events['nloose_muons'] = np.sum(loose_muon_sel,axis=1)
 events['ntight_muons'] = np.sum(tight_muon_sel,axis=1)
 veto_muons = muons[muons.isveto]
-good_muons = muons[muons.isloose]
+good_muons = muons[muons.istight]
 
 ##########################################################################
 # for electron and muon ID, I Haven't added Deep Jet of nearby jet, 
@@ -119,7 +119,7 @@ events['nveto_electrons'] = np.sum(veto_elec_sel,axis=1)
 events['nloose_electrons'] = np.sum(loose_elec_sel,axis=1)
 events['ntight_electrons'] = np.sum(tight_elec_sel,axis=1)
 veto_electrons = electrons[electrons.isveto]
-good_electrons = electrons[electrons.isloose]
+good_electrons = electrons[electrons.istight]
 
 index = ak.argsort(leptons.pt, ascending=False)
 leptons = leptons[index]
